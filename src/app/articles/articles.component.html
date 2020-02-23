@@ -1,1 +1,19 @@
-<p>articles works!</p>
+<div class="post-preview">
+  <div class="post-meta">
+    <a href="profile.html">
+      <img [src]="articlesData.author.image" />
+    </a>
+    <div class="info">
+      <a href="profile.html" class="author">{{articlesData.author.username}}</a>
+      <span class="date">{{articlesData.createdAt}}</span>
+    </div>
+    <button class="btn btn-outline-primary btn-sm pull-xs-right">
+      <i class="ion-heart"></i> {{articlesData.favorited}}
+    </button>
+  </div>
+  <a href="post.html" class="preview-link">
+    <h1>{{articlesData.title}}</h1>
+    <p>{{articlesData.description}}</p>
+    <span>Read more...</span>
+  </a>
+</div>

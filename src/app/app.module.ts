@@ -9,13 +9,16 @@ import { TagsComponent } from './tags/tags.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClient } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ArticlesComponent,
     TagsComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

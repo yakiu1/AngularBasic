@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <a [style.font-size.px]="fontSize" class="navbar-brand" href="index.html">conduit</a>
+    <a [class]="{highlight: isHightlight}" [style.font-size.px]="fontSize" class="navbar-brand" href="index.html">GonGonWeb</a>
     <input #inputSearch class="form-control form-control-sm search-input" [(ngModel)]="searchText" type="text"
       placeholder="keyword">
     <button (click)="onSearchClick()" class="btn btn-sm btn-primary">
