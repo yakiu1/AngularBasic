@@ -18,9 +18,13 @@ export class AppComponent {
     this.articalService.getWords().subscribe(data => { this.articlesData = data; });
   }
 
-  doArticalThumb(evt: any): void {
+  doArticalThumb(evt: { user, articles }): void {
     this.title = '你讚了' + evt.articles;
     console.log(evt);
+  }
+
+  SearchWithKeyword(evt: { data }): void {
+    this.title = '你找了' + evt.data;
   }
 
 }
