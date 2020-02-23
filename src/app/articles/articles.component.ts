@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { ArticlesDataInterface } from './articlesDataInterface';
 import { ArticlesService } from './articles.service';
 @Component({
@@ -8,7 +8,9 @@ import { ArticlesService } from './articles.service';
 })
 export class ArticlesComponent implements OnInit {
   @Input()
-  articlesData: ArticlesDataInterface;
+  articlesData: ArticlesDataInterface[];
+  @Output()
+  thumb = new EventEmitter();
 
   constructor(private articalService: ArticlesService) { }
 
@@ -16,5 +18,16 @@ export class ArticlesComponent implements OnInit {
 
   }
 
+  public OnClickThumb(evt: MouseEvent, item: any): void {
+    try {
+      if (!item.alreadyLike) {
+        item.favoritesCount = item.favoritesCount + 1;
+        item.alreadyLike = true;
+        this.thumb.emit({ user: 'Gon', articles: item.slug });
+      }
+      console.log(item);
+    } catch  {
 
+    }
+  }
 }

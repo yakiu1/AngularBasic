@@ -14,11 +14,13 @@ export class AppComponent {
   linkHtml = '<u>knowledge.</u>';
   articlesData: ArticlesDataInterface;
 
-
   constructor(private articalService: ArticlesService) {
     this.articalService.getWords().subscribe(data => { this.articlesData = data; });
+  }
 
-
+  doArticalThumb(evt: any): void {
+    this.title = '你讚了' + evt.articles;
+    console.log(evt);
   }
 
 }

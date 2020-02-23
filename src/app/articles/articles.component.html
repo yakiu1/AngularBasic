@@ -7,7 +7,7 @@
       <a href="profile.html" class="author">{{item.author.username}}</a>
       <span class="date">{{item.createdAt}}</span>
     </div>
-    <button class="btn btn-outline-primary btn-sm pull-xs-right">
+    <button class="btn btn-outline-primary btn-sm pull-xs-right" (click)="OnClickThumb($event,item)">
       <i class="ion-heart"></i> {{item.favoritesCount}}
     </button>
   </div>
