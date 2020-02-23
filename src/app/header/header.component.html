@@ -1,10 +1,12 @@
 <nav class="navbar navbar-light">
   <div class="container">
     <a [style.font-size.px]="fontSize" class="navbar-brand" href="index.html">conduit</a>
-    <input class="form-control form-control-sm search-input" [value]="searchText" type="text" placeholder="keyword">
+    <input #inputSearch class="form-control form-control-sm search-input" [(ngModel)]="searchText" type="text"
+      placeholder="keyword">
     <button (click)="onSearchClick()" class="btn btn-sm btn-primary">
       <i class="ion-search"></i>
     </button>
+    <span style="color: red;" *ngIf="!searchText.length">請輸入查詢條件</span>
     <p>{{ searchText }}</p>
   </div>
 </nav>
