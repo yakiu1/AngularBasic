@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  fontSize: number;
   searchText: string;
   value: string;
+
   constructor() {
+    this.fontSize = 12;
     this.value = '';
     this.searchText = '';
   }
@@ -21,6 +24,7 @@ export class HeaderComponent implements OnInit {
     try {
       this.searchText = this.searchText + '1';
       console.log(this.searchText);
+      this.fontSize = this.fontSize + 1;
     } catch {
 
     }
