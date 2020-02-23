@@ -12,6 +12,6 @@ export class ArticlesService {
   }
   // GetArticleData
   getWords() {
-    return this.http.get<ArticlesDataInterface>('./api/apiData.json');
+    return this.http.get<ArticlesDataInterface[]>('./api/apiData.json');
   }
 }
