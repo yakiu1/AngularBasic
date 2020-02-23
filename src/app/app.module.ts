@@ -9,7 +9,8 @@ import { TagsComponent } from './tags/tags.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
