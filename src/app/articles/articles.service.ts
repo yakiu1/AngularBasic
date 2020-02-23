@@ -10,9 +10,8 @@ export class ArticlesService {
 
   constructor(private http: HttpClient) {
   }
-
+  // GetArticleData
   getWords() {
-    // now returns an Observable of Config
     return this.http.get<ArticlesDataInterface>('./api/apiData.json');
   }
 }
